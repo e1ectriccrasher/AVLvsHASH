@@ -123,12 +123,12 @@ public class AVLTree
     * Description : Insert a new node to the AVL tree
     * Order of Method : T(n) = O(log(n))
     */
-    Node insertNode(Node root, String key)
+    Node insertNode(Node root, Integer key)
     {
         if (root == null)
             return new Node(key);
 
-        else if (key.compareToIgnoreCase(root.name) < 0)
+        else if (key.compareTo(root.name) < 0)
             root.left = insertNode(root.left, key);
 
         else
@@ -156,15 +156,15 @@ public class AVLTree
     * Description : remove key from AVL tree
     * Order of Method : T(n) = O(log(n))
     */
-    Node removeNode(Node root, String key)
+    Node removeNode(Node root, Integer key)
     {
         if (root == null)
             return root;
 
-        else if (key.compareToIgnoreCase(root.name) < 0)
+        else if (key.compareTo(root.name) < 0)
             root.left = removeNode(root.left, key);
 
-        else if (key.compareToIgnoreCase(root.name) > 0)
+        else if (key.compareTo(root.name) > 0)
             root.right = removeNode(root.right, key);
 
         else
@@ -197,9 +197,9 @@ public class AVLTree
     * Description : Binary-Search in AVL tree
     * Order of Method : T(n) = O(log(n))
     */
-    Node search(Node root, String key)
+    Node search(Node root, Integer key)
     {
-        if (root == null || key.compareToIgnoreCase(root.name) == 0)
+        if (root == null || key.compareTo(root.name) == 0)
             return root;
 
         if (key.compareTo(root.name) < 0)
@@ -214,7 +214,7 @@ public class AVLTree
     * Description : Add a new Name into AVL tree
     * Order of Method : T(n) = O(log(n))
     */
-    void add(String key)
+    void add(Integer key)
     {
         if (search(Root , key) == null)
         {
@@ -231,7 +231,7 @@ public class AVLTree
     * Description : Delete a Name from AVL tree
     * Order of Method : T(n) = O(log(n))
     */
-    void delete(String key)
+    void delete(Integer key)
     {
         if (search(Root , key) != null)
         {
@@ -248,7 +248,7 @@ public class AVLTree
    * Description : return the depth of key
    * Order of Method : T(n) = O(log(n))
    */
-    int depth(String key)
+    int depth(Integer key)
     {
         Node temp = search(Root, key);
 

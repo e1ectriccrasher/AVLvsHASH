@@ -1,21 +1,21 @@
 public class Node
 {
-    String name;
+    Integer name;
     int height;
     Node left;
     Node right;
 
     public Node()
     {
-        this.name = new String("Value");
+        this.name = new Integer(12);
         this.height = 1;
         this.left = null;
         this.right = null;
     }
 
-    public Node(String name)
+    public Node(Integer name)
     {
-        this.name = new String(name);
+        this.name = new Integer(name);
         this.height = 1;
         this.left = null;
         this.right = null;

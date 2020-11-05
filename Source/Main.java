@@ -4,22 +4,14 @@ public class Main
     {
         AVLTree tree = new AVLTree();
 
-        tree.add("Amanda");
-        tree.add("Harry");
-        tree.add("Harry");
-        tree.add("Xavi");
-        tree.add("Hector");
-        tree.add("Mary");
-        tree.add("Ron");
+        long start = System.currentTimeMillis();
+        for (int i=0;i<100000;i++){
+            tree.add(i);
+        }
+        long end = System.currentTimeMillis();
 
-        tree.showingInOrder(tree.Root);
-        tree.showingPreOrder(tree.Root);
+        float sec = (end - start) / 1000F;
 
-        tree.delete("Ron");
-        tree.search(tree.Root, "Mary");
-        tree.delete("Mary");
-
-        tree.showingInOrder(tree.Root);
-        tree.showingPreOrder(tree.Root);
+        System.err.println(sec);
     }
 }
