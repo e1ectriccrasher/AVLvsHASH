@@ -199,7 +199,7 @@ public class AVLTree
     */
     Node search(Node root, Integer key)
     {
-        if (root == null || key.compareTo(root.name) == 0)
+        if (root == null )
             return root;
 
         if (key.compareTo(root.name) < 0)

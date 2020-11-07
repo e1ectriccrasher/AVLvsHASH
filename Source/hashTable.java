@@ -3,10 +3,10 @@ import java.util.ArrayList;
 public class hashTable<T> {
 	private ArrayList<T>[] tabla;
 	int cont;
-	double factorCarga=20000;
+	double factorCarga=0; // cambiarlo 
 		
 public hashTable() {
-		tabla = new ArrayList[100];
+		tabla = new ArrayList[111111111];
 		cont = 0;
 			
 		for(int i = 0; i < tabla.length; i++)
@@ -74,7 +74,7 @@ public hashTable() {
         hashTable tabla = new hashTable<>();
 
         long start = System.currentTimeMillis();
-        for(int i=0;i<100000; i++){
+        for(int i=0;i<1000000; i++){
             tabla.insert(i);
             System.out.println("inserto   " +  Integer.toString(i));
         }
@@ -82,7 +82,13 @@ public hashTable() {
 
         float sec = (end - start) / 1000F;
 
-        System.out.println(sec);
+		System.out.println(sec);
+		long start1 = System.nanoTime();
+		System.out.println(tabla.buscar(15));
+		long end1 = System.nanoTime();
+		float sec1 = (end1 - start1);
+
+		System.out.println(sec1);
     }
 		
 }
