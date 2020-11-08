@@ -219,11 +219,10 @@ public class AVLTree
         if (search(Root , key) == null)
         {
             Root = insertNode(Root , key);
-            System.out.println("\n" + key + " added successfully :)");
+            //System.out.println("\n" + key + " added successfully :)");
         }
 
-        else
-            System.out.println("\n" + key + " has been added :(");
+        
     }
 
     /*
