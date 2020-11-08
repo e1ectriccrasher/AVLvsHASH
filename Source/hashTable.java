@@ -6,7 +6,7 @@ public class hashTable<T> {
 	double factorCarga=0; // cambiarlo 
 		
 public hashTable() {
-		tabla = new ArrayList[111111111];
+		tabla = new ArrayList[1];
 		cont = 0;
 			
 		for(int i = 0; i < tabla.length; i++)
@@ -73,22 +73,22 @@ public hashTable() {
     public static void main(String[] args) {
         hashTable tabla = new hashTable<>();
 
-        long start = System.currentTimeMillis();
-        for(int i=0;i<1000000; i++){
+        long start = System.nanoTime();
+        for(int i=0;i<=100; i++){
             tabla.insert(i);
-            System.out.println("inserto   " +  Integer.toString(i));
+            System.out.println("inserto   " +  i);
         }
-        long end = System.currentTimeMillis();
+        long end = System.nanoTime();
 
-        float sec = (end - start) / 1000F;
+        float sec = (end - start) / 1000;
 
-		System.out.println(sec);
+		System.out.println("Timepo de incersion " +sec);
 		long start1 = System.nanoTime();
-		System.out.println(tabla.buscar(15));
+		System.out.println("Lo encontre " + tabla.buscar(0));
 		long end1 = System.nanoTime();
-		float sec1 = (end1 - start1);
+		float sec1 = (end1 - start1) / 1000;
 
-		System.out.println(sec1);
+		System.out.println("Busqueda " + sec1);
     }
 		
 }
