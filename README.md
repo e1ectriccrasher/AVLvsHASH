@@ -5,7 +5,3 @@ este es un proyecto para "demostrar" cual de las dos estructuras es mejor en cua
     Alejandro 
     Anairam
     
-## codigo de python prueba
-´´´ python
-print('hola')
-´´´
