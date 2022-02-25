@@ -4,4 +4,10 @@ este es un proyecto para "demostrar" cual de las dos estructuras es mejor en cua
 ## integrantes 
     Alejandro 
     Anairam
+
+## code
     
+```
+var add2 = function(number) {
+  return number + 2;
+}
