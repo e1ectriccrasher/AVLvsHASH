@@ -7,7 +7,7 @@ este es un proyecto para "demostrar" cual de las dos estructuras es mejor en cua
 
 ## code
     
-```
+``` python
 var add2 = function(number) {
   return number + 2;
 }
